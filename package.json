@@ -48,12 +48,12 @@
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
+    "test:watch": "yarn test --watch",
     "tslint": "tslint -c tslint.json --project tsconfig.json 'src/**/*.ts{,x}'",
     "lint": "yarn tslint",
     "commitmsg": "commitlint -E GIT_PARAMS",
     "prepush": "yarn lint && yarn test",
-    "postmerge": "yarn",
-    "test:watch": "jest --watch"
+    "postmerge": "yarn"
   },
   "devDependencies": {
     "@commitlint/cli": "^7.0.0",
@@ -77,6 +77,9 @@
       "<rootDir>/src/**/__tests__/**/*.(j|t)s?(x)",
       "<rootDir>/src/**/?(*.)(spec|test).(j|t)s?(x)"
     ],
+    "roots": [
+      "<rootDir>/src"
+    ],
     "testEnvironment": "node",
     "testURL": "http://localhost",
     "transform": {
@@ -89,8 +92,13 @@
       "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs|ts|tsx)$"
     ],
     "moduleNameMapper": {
-      "^react-native$": "react-native-web"
+      "^react-native$": "react-native-web",
+      "~/(.*)": "<rootDir>/src/$1"
     },
+    "moduleDirectories": [
+      "node_modules",
+      "src"
+    ],
     "moduleFileExtensions": [
       "web.ts",
       "ts",
