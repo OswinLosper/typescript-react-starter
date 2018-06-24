@@ -13,7 +13,8 @@ const Configuration = {
      * Any rules defined here will override rules from @commitlint/config-conventional
      */
     rules: {
-        'type-enum': [2, 'always', ['chore', 'feat', 'fix', 'none']]
+        'type-enum': [2, 'always', ['chore', 'feat', 'fix', 'none']],
+        'subject-case': [2, 'always', ['lower-case']]
     }
 };
 
