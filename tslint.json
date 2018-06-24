@@ -12,6 +12,13 @@
   },
   "jsRules": {},
   "rules": {
+    "arrow-parens": [
+      false
+    ],
+    "ter-arrow-parens": [
+      true,
+      "as-needed"
+    ],
     "variable-name": [
       true,
       "ban-keywords",
