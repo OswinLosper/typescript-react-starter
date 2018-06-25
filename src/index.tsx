@@ -14,6 +14,8 @@ const { render } = ReactDOM;
 
 const target = document.querySelector('#root') as HTMLElement;
 
+import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 render(
   <Provider store={store}>
