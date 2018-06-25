@@ -1,9 +1,15 @@
 import * as React from 'react';
+
 import './App.css';
 
 import mainlogo from '~/resources/mainlogo.svg';
 
 class App extends React.Component {
+
+  componentDidMount() {
+
+  }
+
   public render() {
     return (
       <div className="App">
