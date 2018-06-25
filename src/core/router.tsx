@@ -1,12 +1,11 @@
 import * as React from 'react';
-const { Fragment } = React;
 import { Route /* , Link */ } from 'react-router-dom';
 import HomePage from '~/components/pages/home/component';
 
 const Router = () => (
-  <Fragment>
+  <div>
     <Route exact path="/" component={HomePage} />
-  </Fragment>
+  </div>
 );
 
 export default Router;

@@ -4,11 +4,11 @@ import { Provider } from 'react-redux';
 
 import store, { history } from '~/redux/store';
 
-import App from './core/App';
 import './index.css';
 import registerServiceWorker from './registerServiceWorker';
 
 import { ConnectedRouter } from 'react-router-redux';
+import Router from '~/core/router';
 
 const { render } = ReactDOM;
 
@@ -18,9 +18,7 @@ const target = document.querySelector('#root') as HTMLElement;
 render(
   <Provider store={store}>
     <ConnectedRouter history={history}>
-      <div>
-        <App />
-      </div>
+      <Router />
     </ConnectedRouter>
   </Provider>,
   target,
