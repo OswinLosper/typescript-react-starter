@@ -1,5 +1,4 @@
-import * as React from 'react';
-const { Component } = React;
+import React, { Component } from 'react';
 
 export interface IHomePageProps {
   title?: string;
