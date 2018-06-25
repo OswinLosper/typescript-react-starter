@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { deepDive } from '~/core/setupTests';
+// import { deepDive } from '~/core/setupTests';
 import { shallow } from 'enzyme';
 
 import Router from './router';
